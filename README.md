@@ -42,7 +42,7 @@ npm install
 ### 2. Environment Setup
 Create a `.env.local` file:
 ```env
-MONGODB_URI=mongodb+srv://wisakov432:wgueq3w4rlIzLQ3U@cluster0.pustd.mongodb.net/todo-app?retryWrites=true&w=majority
+MONGODB_URI=your mongo connection string.
 ```
 
 ### 3. Run Development Server
@@ -79,7 +79,7 @@ docker build -t cloudtask .
 
 # Run container
 docker run -p 3000:3000 \
-  -e MONGODB_URI="mongodb+srv://wisakov432:wgueq3w4rlIzLQ3U@cluster0.pustd.mongodb.net/todo-app" \
+  -e MONGODB_URI="your mongo db url" \
   cloudtask
 ```
 
