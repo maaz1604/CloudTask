@@ -32,7 +32,7 @@ export default function Home() {
             <div className="flex-1 text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 flex items-center justify-center gap-3">
                 <FiPocket className="text-blue-600 dark:text-blue-400" size={48} />
-                Todo Master
+                CloudTask
               </h1>
             </div>
             <div className="flex-1 flex justify-end">

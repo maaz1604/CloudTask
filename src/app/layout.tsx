@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Todo Master - Professional Task Manager',
+  title: 'ClodTask - Professional Task Manager',
   description: 'A modern and professional todo application for managing your daily tasks efficiently',
   icons: {
     icon: '/favicon.ico',
