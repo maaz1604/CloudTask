@@ -42,7 +42,7 @@ npm install
 ### 2. Environment Setup
 Create a `.env.local` file:
 ```env
-MONGODB_URI=mongodb+srv://wisakov432:wgueq3w4rlIzLQ3U@cluster0.pustd.mongodb.net
+MONGODB_URI=your mongo connection string.
 ```
 
 ### 3. Run Development Server
