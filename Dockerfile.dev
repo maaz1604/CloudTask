@@ -1,0 +1,32 @@
+# Development Dockerfile for debugging build issues
+FROM node:18-alpine
+
+# Install dependencies
+RUN apk add --no-cache libc6-compat
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies with verbose output
+RUN npm install --verbose
+
+# Copy source code
+COPY . .
+
+# Set environment variables
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV=development
+# Provide MongoDB URI for build-time validation
+ENV MONGODB_URI=mongodb+srv://wisakov432:wgueq3w4rlIzLQ3U@cluster0.pustd.mongodb.net/todo-app?retryWrites=true&w=majority
+
+# Build with verbose output and error handling
+RUN npm run build || (echo "Build failed - checking for issues..." && npm run lint && exit 1)
+
+# Expose port
+EXPOSE 3000
+
+# Start the application
+CMD ["npm", "run", "start"]

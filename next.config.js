@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  // Enable standalone output for Docker deployment
+  output: 'standalone',
+  // Remove deprecated appDir option as it's now the default in Next.js 14
 }
 
 module.exports = nextConfig

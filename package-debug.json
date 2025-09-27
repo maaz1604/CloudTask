@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "prebuild": "echo 'Starting build process...' && npm --version && node --version",
+    "build": "next build",
+    "postbuild": "echo 'Build completed successfully!'",
+    "build:debug": "npm run prebuild && npm run build && npm run postbuild",
+    "dev": "next dev",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  }
+}
